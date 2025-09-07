@@ -84,7 +84,7 @@ function updateCartDisplay() {
             <div class="cart-item-thumbnail">${item.thumbnail}</div>
             <div class="cart-item-details">
                 <h4>${item.title}</h4>
-                <p>$${item.price.toFixed(2)}</p>
+                <p>₹${item.price.toFixed(2)}</p>
             </div>
             <div class="cart-item-quantity">
                 <button class="quantity-btn minus">-</button>
@@ -139,7 +139,7 @@ function removeItem(courseId) {
 
 function updateTotal() {
     total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    cartTotal.textContent = `Your Total: $${total.toFixed(2)}`;
+    cartTotal.textContent = `Your Total: ₹${total.toFixed(2)}`;
 }
 
 function clearCart() {
@@ -161,6 +161,6 @@ function proceedToCheckout() {
         alert('Your cart is empty!');
         return;
     }
-    alert(`Proceeding to checkout with total: $${total.toFixed(2)}`);
+    alert(`Proceeding to checkout with total: ₹${total.toFixed(2)}`);
     // In a real application, this would redirect to a checkout page
 }
