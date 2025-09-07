@@ -13,6 +13,12 @@ const clearCartBtn = document.querySelector('.clear-cart-btn');
 const proceedBtn = document.querySelector('.proceed-btn');
 const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
 
+// Mobile sidebar elements
+const menuTrigger = document.querySelector('.menu-trigger');
+const mobileSidebar = document.querySelector('.mobile-sidebar');
+const closeSidebarBtn = document.querySelector('.close-sidebar');
+const sidebarMenuLinks = document.querySelectorAll('.sidebar-menu a');
+
 // Course data
 const courses = {
     python: { title: 'Python Programming', price: 49.99, thumbnail: '🐍' },
@@ -27,6 +33,13 @@ cartIcon.addEventListener('click', toggleCart);
 closeCartBtn.addEventListener('click', closeCart);
 clearCartBtn.addEventListener('click', clearCart);
 proceedBtn.addEventListener('click', proceedToCheckout);
+
+// Mobile sidebar event listeners
+menuTrigger.addEventListener('click', toggleSidebar);
+closeSidebarBtn.addEventListener('click', closeSidebar);
+sidebarMenuLinks.forEach(link => {
+    link.addEventListener('click', closeSidebar);
+});
 
 addToCartBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -163,4 +176,13 @@ function proceedToCheckout() {
     }
     alert(`Proceeding to checkout with total: ₹${total.toFixed(2)}`);
     // In a real application, this would redirect to a checkout page
+}
+
+// Mobile sidebar functions
+function toggleSidebar() {
+    mobileSidebar.classList.toggle('open');
+}
+
+function closeSidebar() {
+    mobileSidebar.classList.remove('open');
 }
