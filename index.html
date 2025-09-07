@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+< !DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -24,16 +24,72 @@
             <li><a href="#">ABOUT US</a></li>
         </ul>
         <div class="nav-right">
-            <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 3H5L5.4 5M7 13H19L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <div class="cart-container">
+                <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3H5L5.4 5M7 13H19L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="cart-badge">0</span>
+            </div>
         </div>
     </nav>
-    <section class="banner">
+    <section class="hero-banner">
         <div class="banner-content">
             <h1>FIND YOUR FAVORITE COURSE HERE!</h1>
             <button class="shop-btn">SHOP NOW</button>
         </div>
     </section>
+
+    <section class="courses-section">
+        <h1 class="courses-headline">COURSES WE OFFER!!</h1>
+        <div class="courses-grid">
+            <div class="course-card" data-course="python">
+                <img class="course-thumbnail" src="images/python.png" alt="Python Programming" />
+                <h3>Python Programming</h3>
+                <p class="course-price">$49.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="course-card" data-course="cpp">
+                <img class="course-thumbnail" src="images/C.png" alt="C++ Programming" />
+                <h3>C++ Programming</h3>
+                <p class="course-price">$59.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="course-card" data-course="java">
+                <img class="course-thumbnail" src="images/java.png" alt="Java Programming" />
+                <h3>Java Programming</h3>
+                <p class="course-price">$54.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="course-card" data-course="webdev">
+                <img class="course-thumbnail" src="images/Web1.png" alt="Web Development" />
+                <h3>Web Development</h3>
+                <p class="course-price">$69.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="course-card" data-course="digitalmarketing">
+                <img class="course-thumbnail" src="images/digital.png" alt="Digital Marketing" />
+                <h3>Digital Marketing</h3>
+                <p class="course-price">$39.99</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <p class="cart-total">Your Total: $0.00</p>
+            <button class="clear-cart-btn">Clear Cart</button>
+            <button class="proceed-btn">Proceed</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
